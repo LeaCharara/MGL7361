@@ -17,7 +17,7 @@ public class Partenaire {
 	}
 
 	private void addPartenaire(Partenaire partenaire) {
-		CatalogueCadeau.listePartenaires.add(partenaire);
+		Catalogue.listePartenaires.add(partenaire);
 	}
 
 	public int getId() {return id;}
@@ -27,6 +27,6 @@ public class Partenaire {
 	public void setNom(String nom) {this.nom = nom;}
 
 	public void createCadeau(String nom, double prix) {
-		CatalogueCadeau.addCadeau(nom,prix,this.nom);
+		Catalogue.addCadeau(nom,prix,this.nom);
 	}		
 }

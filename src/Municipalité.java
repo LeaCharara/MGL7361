@@ -8,6 +8,6 @@ public class Municipalité {
 		this.nom = nom;
 	}
 	public void createAvantage(String nom) {
-		CatalogueCadeau.addAvantages(nom,this.nom);
+		Catalogue.addAvantages(nom,this.nom);
 	}
 }

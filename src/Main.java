@@ -17,7 +17,7 @@ public class Main {
 		Quebec.createAvantage("Offre sur les tickets de bus");
 		
 		
-		CatalogueCadeau.Allget(); 
+		Catalogue.Allget(); 
 	}
 
 }

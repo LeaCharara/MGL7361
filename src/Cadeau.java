@@ -19,6 +19,12 @@ public class Cadeau implements Offre{
 
 	public String getNomPartenaire() {return nomPartenaire;}
 	public void setNomPartenaire(String nomPartenaire) {this.nomPartenaire = nomPartenaire;}
+
+	@Override
+	public void setPoints() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
