@@ -23,22 +23,25 @@ public class Catalogue {
 		return listeOffres;
 	}
 	
-	public static void addCadeau(String nom, double prix, String nomPartenaire) {
-		Cadeau newCadeau = new Cadeau(nom,prix,nomPartenaire);
+	public static void addCadeau(String nom, double prix) {
+		Cadeau newCadeau = new Cadeau(nom,prix);
 		listeCadeaux.add(newCadeau);
-		listeOffres.add(newCadeau);
 	}
 	public static void addAvantages(String nom, String nomMunicipalite) {
-		Avantage newAvantage = new Avantage(nom,nomMunicipalite);
+		Avantage newAvantage = new Avantage(nom);
 		listeAvantages.add(newAvantage);
 		listeOffres.add(newAvantage);
 		
 	}
 	public static void Allget() {
-		System.out.println(getListePartenaires());
-		System.out.println(getListeCadeaux());
-		System.out.println(getListeAvantages());
-		System.out.println(getListeOffres());
+		List<Partenaire> p = getListePartenaires();
+		for (int i = 0; i < p.size(); ++i) {
+			System.out.println("Patenaire: " + p.get(i).getNom());
+			System.out.println(listeCadeaux.size());
+			for(int j = 0; j < listeCadeaux.size(); ++j) {
+				System.out.println("Cadeaux nº"+j+": "+ listeCadeaux.get(j).getNom());
+			}
+		}
 		
 	}
 	

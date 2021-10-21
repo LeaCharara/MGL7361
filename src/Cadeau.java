@@ -2,13 +2,11 @@ public class Cadeau implements Offre{
 
 	public String nom;
 	public double prix;
-	public String nomPartenaire;
 	
-	public Cadeau(String nom, double prix,String nomPartenaire) {
+	public Cadeau(String nom, double prix) {
 		super();
 		this.nom = nom;
 		this.prix = prix;
-		this.nomPartenaire = nomPartenaire;
 	}
 
 	public String getNom() {return nom;}
@@ -16,9 +14,6 @@ public class Cadeau implements Offre{
 
 	public double getPrix() {return prix;}
 	public void setPrix(double prix) {this.prix = prix;}
-
-	public String getNomPartenaire() {return nomPartenaire;}
-	public void setNomPartenaire(String nomPartenaire) {this.nomPartenaire = nomPartenaire;}
 
 	@Override
 	public void setPoints() {
