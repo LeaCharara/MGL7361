@@ -6,7 +6,7 @@ public class Catalogue {
 	public static List<Partenaire> listePartenaires=new ArrayList<Partenaire>();
 	public static List<Cadeau> listeCadeaux=new ArrayList<Cadeau>();
 	public static List<Avantage> listeAvantages=new ArrayList<Avantage>();
-	public static List<Offre> listeOffres = new ArrayList<Offre>();
+	public static List<IOffre> listeOffres = new ArrayList<IOffre>();
 		
 	
 	public static List<Partenaire> getListePartenaires() {
@@ -19,7 +19,7 @@ public class Catalogue {
 		return listeAvantages;
 	}
 		
-	public static List<Offre> getListeOffres() {
+	public static List<IOffre> getListeOffres() {
 		return listeOffres;
 	}
 	

@@ -1,5 +1,5 @@
 
-public interface Offre {
+public interface IOffre {
 
 	void setPoints();
 	

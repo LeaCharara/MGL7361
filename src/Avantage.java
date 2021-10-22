@@ -1,4 +1,4 @@
-public class Avantage implements Offre{
+public class Avantage implements IOffre{
 
 	private String nom;
 
@@ -8,7 +8,6 @@ public class Avantage implements Offre{
 	}
 
 	public String getNom() {return nom;}
-	public void setNom(String nom) {this.nom = nom;}
 
 	@Override
 	public void setPoints() {

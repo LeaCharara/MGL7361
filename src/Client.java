@@ -8,23 +8,25 @@ public class Client {
     private Boolean VUP;
     private List<Avantage> listeAvantages;
     private CarteINF carte;
+    private Municipalite municipalite;
 
-    public Client(String n) {
+    public Client(String n, Municipalite m) {
         id = (int)(Math.random() * 50224520);
         nom = n;
         VUP = false;
         listeAvantages = new ArrayList<Avantage>();
         carte = new CarteINF();
+        municipalite = m;
     }
 
-    public void setStatus(Municipalite m) {
-        VUP = true;
-        listeAvantages = m.getListeAvantages();
-    }
-
-    public void removeStatus(){
-        VUP = false;
-        listeAvantages = new ArrayList<Avantage>();
+    public void setStatus() {
+        VUP = !VUP;
+        if(VUP){
+            listeAvantages = municipalite.getListeAvantages();
+        }
+        else {
+            listeAvantages = new ArrayList<Avantage>();
+        }
     }
 
     public int getId(){

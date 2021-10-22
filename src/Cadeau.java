@@ -1,4 +1,4 @@
-public class Cadeau implements Offre{
+public class Cadeau implements IOffre{
 
 	public String nom;
 	public double prix;

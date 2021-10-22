@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.lang.Math;
 
-public class Partenaire {
+public class Partenaire implements IPartenaire{
 
 	private int id;
 	private String nom;
@@ -34,5 +34,13 @@ public class Partenaire {
 	}	
 	public void addCadeau(String nom, double prix) {
 		listeCadeaux.add(new Cadeau(nom, prix)); 
-	}		
+	}	
+	
+	public void validatePoints(int points, CarteINF carte) {
+		carte.removePoints(points);
+	}
+
+	public void addPoints(double price, CarteINF carte){
+		carte.addPoints(price);
+	}
 }

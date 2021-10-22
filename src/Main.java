@@ -21,11 +21,11 @@ public class Main {
 		
 		Quebec.createAvantage("Offre sur les tickets de bus");
 		
-		Client Lea = new Client("Lea");
+		Client Lea = new Client("Lea", Quebec);
 		Lea.getInfo();
 		System.out.println("\n");
 
-		Lea.setStatus(Quebec);
+		Lea.setStatus();
 		Lea.getInfo();
 		System.out.println("\n");
 		System.out.println("-------------Catalogue-------------");
