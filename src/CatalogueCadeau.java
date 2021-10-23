@@ -1,15 +1,14 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class CatalogueCadeau {
 
-	public static List<Partenaire> listePartenaires = new ArrayList<Partenaire>();
+	public static HashMap<Integer, Partenaire> listePartenaires = new HashMap<Integer, Partenaire>();
 	// public static List<Cadeau> listeCadeaux=new ArrayList<Cadeau>();
 	// public static List<Avantage> listeAvantages=new ArrayList<Avantage>();
 	// public static List<Offre> listeOffres = new ArrayList<Offre>();
 		
 	
-	public static List<Partenaire> getPartenaires() {
+	public static HashMap<Integer, Partenaire> getPartenaires() {
 		return listePartenaires;
 	}
 	// public static List<Cadeau> getListeCadeaux() {
@@ -24,7 +23,7 @@ public class CatalogueCadeau {
 	// }
 	
 	public static void addPartenaire(Partenaire partenaire) {
-		listePartenaires.add(partenaire);
+		listePartenaires.put(partenaire.getId(), partenaire);
 	}
 
 	// public static void addCadeau(String nom, double prix, String nomPartenaire) {
@@ -39,11 +38,10 @@ public class CatalogueCadeau {
 		
 	// }
 	public static void getAll() {
-		List<Partenaire> p = getPartenaires();
-		for (int i = 0; i < p.size(); ++i) {
-			System.out.println("Partenaire: " + p.get(i).getNom());
+		for (int i : listePartenaires.keySet()) {
+			System.out.println("Partenaire: " + listePartenaires.get(i).getNom());
 			System.out.println("--------Offres Disponible----------");
-			p.get(i).getlisteCadeauxAsString();
+			listePartenaires.get(i).getlisteCadeauxAsString();
 			System.out.println("\n");
 
 		}

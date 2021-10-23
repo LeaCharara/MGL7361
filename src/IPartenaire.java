@@ -1,7 +1,7 @@
-import java.util.List;
+import java.util.HashMap;
 
 public interface IPartenaire {
-    List<Cadeau> getCadeaux();
+    HashMap<Integer, Cadeau> getCadeaux();
     void addCadeau(Cadeau cadeau);
     //void removeCadeau(int index);
     void addPoints(double price, CarteINF carte);

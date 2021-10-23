@@ -1,12 +1,11 @@
-import java.util.List;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.lang.Math;
 public class Client {
     
     private int id;
     private String nom;
     private Boolean statutVUP;
-    private List<Avantage> avantages;
+    private HashMap<Integer, Avantage> avantages;
     private CarteINF carte;
     private Municipalite municipalite;
 
@@ -14,7 +13,7 @@ public class Client {
         id = (int)(Math.random() * 50224520);
         nom = n;
         statutVUP = false;
-        avantages = new ArrayList<Avantage>();
+        avantages = new HashMap<Integer, Avantage>();
         carte = new CarteINF();
         municipalite = m;
     }
@@ -25,7 +24,7 @@ public class Client {
             avantages = municipalite.getAvantages();
         }
         else {
-            avantages = new ArrayList<Avantage>();
+            avantages = new HashMap<Integer, Avantage>();
         }
     }
 
@@ -41,7 +40,7 @@ public class Client {
         return statutVUP;
     }
 
-    public List<Avantage> getAvantages() {
+    public HashMap<Integer, Avantage> getAvantages() {
         return avantages;
     }
 
@@ -57,8 +56,8 @@ public class Client {
         System.out.println("Nom de l'utilisateur: " + nom);
         System.out.println("Statut VUP: " + statutVUP);
         System.out.println("------------Avantages------------");
-        if(listeAvantages.size() > 0){
-            for(int i = 0; i < avantages.size(); i++){
+        if(avantages.size() > 0){
+            for(int i : avantages.keySet()){
                 System.out.println(avantages.get(i).getNom());
             }
         }
