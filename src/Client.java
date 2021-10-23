@@ -5,27 +5,27 @@ public class Client {
     
     private int id;
     private String nom;
-    private Boolean VUP;
-    private List<Avantage> listeAvantages;
+    private Boolean statutVUP;
+    private List<Avantage> avantages;
     private CarteINF carte;
     private Municipalite municipalite;
 
     public Client(String n, Municipalite m) {
         id = (int)(Math.random() * 50224520);
         nom = n;
-        VUP = false;
-        listeAvantages = new ArrayList<Avantage>();
+        statutVUP = false;
+        avantages = new ArrayList<Avantage>();
         carte = new CarteINF();
         municipalite = m;
     }
 
-    public void setStatus() {
-        VUP = !VUP;
-        if(VUP){
-            listeAvantages = municipalite.getListeAvantages();
+    public void setStatutVUP() {
+        statutVUP = !statutVUP;
+        if(statutVUP){
+            avantages = municipalite.getAvantages();
         }
         else {
-            listeAvantages = new ArrayList<Avantage>();
+            avantages = new ArrayList<Avantage>();
         }
     }
 
@@ -37,27 +37,29 @@ public class Client {
         return nom;
     }
 
-    public Boolean getStatus() {
-        return VUP;
+    public Boolean getStatutVUP() {
+        return statutVUP;
     }
 
-    public List<Avantage> getListeAvantages() {
-        return listeAvantages;
+    public List<Avantage> getAvantages() {
+        return avantages;
     }
 
     public CarteINF getCarte() {
         return carte;
     }
 
+    //----------HORS-MODELE-DES-INTERFACES-------------
+
     public void getInfo() {
         System.out.println("------------Information du client------------");
         System.out.println("Numero de compte: "+ id);
         System.out.println("Nom de l'utilisateur: " + nom);
-        System.out.println("Statut VUP: " + VUP);
+        System.out.println("Statut VUP: " + statutVUP);
         System.out.println("------------Avantages------------");
         if(listeAvantages.size() > 0){
-            for(int i = 0; i < listeAvantages.size(); i++){
-                System.out.println(listeAvantages.get(i).getNom());
+            for(int i = 0; i < avantages.size(); i++){
+                System.out.println(avantages.get(i).getNom());
             }
         }
         else{

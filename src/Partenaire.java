@@ -6,7 +6,7 @@ public class Partenaire implements IPartenaire{
 
 	private int id;
 	private String nom;
-	private List<Cadeau> listeCadeaux=new ArrayList<Cadeau>();
+	private List<Cadeau> cadeaux=new ArrayList<Cadeau>();
 	//public static List<Avantage> listeAvantages=new ArrayList<Avantage>();
 
 
@@ -22,18 +22,18 @@ public class Partenaire implements IPartenaire{
 	public String getNom() {return nom;}
 	public void setNom(String nom) {this.nom = nom;}
 
-	public List<Cadeau> getListeCadeaux(){return listeCadeaux;}
+	public List<Cadeau> getCadeaux(){return cadeaux;}
 
 	public void getlisteCadeauxAsString() {
-		if(listeCadeaux.size() == 0){System.out.println("Aucune");}
+		if(cadeaux.size() == 0){System.out.println("Aucune");}
 		else{
-			for (int i = 0; i < listeCadeaux.size(); i++){
-				System.out.println(listeCadeaux.get(i).getNom());
+			for (int i = 0; i < cadeaux.size(); i++){
+				System.out.println(cadeaux.get(i).getNom());
 			}
 		}
 	}	
 	public void addCadeau(String nom, double prix) {
-		listeCadeaux.add(new Cadeau(nom, prix)); 
+		cadeaux.add(new Cadeau(nom, prix)); 
 	}	
 	
 	public void validatePoints(int points, CarteINF carte) {

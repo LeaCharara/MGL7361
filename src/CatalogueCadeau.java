@@ -3,13 +3,13 @@ import java.util.List;
 
 public class CatalogueCadeau {
 
-	public static List<Partenaire> listePartenaires=new ArrayList<Partenaire>();
+	public static List<Partenaire> listePartenaires = new ArrayList<Partenaire>();
 	// public static List<Cadeau> listeCadeaux=new ArrayList<Cadeau>();
 	// public static List<Avantage> listeAvantages=new ArrayList<Avantage>();
 	// public static List<Offre> listeOffres = new ArrayList<Offre>();
 		
 	
-	public static List<Partenaire> getListePartenaires() {
+	public static List<Partenaire> getPartenaires() {
 		return listePartenaires;
 	}
 	// public static List<Cadeau> getListeCadeaux() {
@@ -38,10 +38,10 @@ public class CatalogueCadeau {
 	// 	listeOffres.add(newAvantage);
 		
 	// }
-	public static void Allget() {
-		List<Partenaire> p = getListePartenaires();
+	public static void getAll() {
+		List<Partenaire> p = getPartenaires();
 		for (int i = 0; i < p.size(); ++i) {
-			System.out.println("Patenaire: " + p.get(i).getNom());
+			System.out.println("Partenaire: " + p.get(i).getNom());
 			System.out.println("--------Offres Disponible----------");
 			p.get(i).getlisteCadeauxAsString();
 			System.out.println("\n");

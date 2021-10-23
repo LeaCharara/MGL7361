@@ -9,6 +9,8 @@ public class Cadeau implements IOffre{
 		this.prix = prix;
 	}
 
+	//----------HORS-MODELE-DES-INTERFACES-------------
+	
 	public String getNom() {return nom;}
 	public void setNom(String nom) {this.nom = nom;}
 

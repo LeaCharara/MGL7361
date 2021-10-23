@@ -7,12 +7,14 @@ public class Avantage implements IOffre{
 		this.nom = nom;
 	}
 
-	public String getNom() {return nom;}
+	//----------HORS-MODELE-DES-INTERFACES-------------
+
+	public String getNom() {return nom;} //Remy
 
 	@Override
 	public void setPoints() {
 		// TODO Auto-generated method stub
 		
-	} 
+	} //Remy
 	
 }

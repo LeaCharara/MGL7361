@@ -18,8 +18,8 @@ public class CarteINF {
         soldePoint += (int)price*0.1;
     }
 
-    public void removePoints(int point){
-        soldePoint -= point;
+    public void removePoints(int points){
+        soldePoint -= points;
     }
 
     public void addMoney(double price){
@@ -44,10 +44,12 @@ public class CarteINF {
         return soldeArgent;
     }
     
-    public int getnbUtilisations() {
+    public int getNbUtilisations() {
         return nbUtilisations;
     }
 
+    //----------HORS-MODELE-DES-INTERFACES-------------
+    
     public void getInfo() {
         System.out.println("Numero de la carte: " + id);
         System.out.println("Montant de point : " + soldePoint);
