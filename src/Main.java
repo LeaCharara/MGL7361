@@ -1,18 +1,15 @@
 import java.time.LocalDate;
 import java.util.Calendar;
-import java.text.DateFormatSymbols;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		CatalogueCadeau catalogue = new CatalogueCadeau();
 
 		Partenaire Metro = new Partenaire("Metro");
 		Metro.addCadeau(new Cadeau("Machine à café", 1500));
 		Partenaire IGA = new Partenaire("IGA");
-		catalogue.addPartenaire(IGA);
+		CatalogueCadeau.addPartenaire(IGA);
 		Partenaire Pharmaprix = new Partenaire("Pharmaprix");
-		catalogue.addPartenaire(Pharmaprix);
+		CatalogueCadeau.addPartenaire(Pharmaprix);
 		IGA.addCadeau(new Cadeau("Brosse à dent electrique",500));
 		IGA.addCadeau(new Cadeau("10 Mascaras",700));
 		
@@ -33,7 +30,7 @@ public class Main {
 		Lea.getInfo();
 		System.out.println("\n");
 		System.out.println("-------------Catalogue------------- \n");
-		catalogue.getAll();
+		CatalogueCadeau.getAll();
 		if (currentDay == lastdate) {
 			Lea.getCarte().Bonus();
 		}

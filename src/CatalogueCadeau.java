@@ -2,17 +2,17 @@ import java.util.HashMap;
 
 public class CatalogueCadeau {
 
-	public HashMap<Integer, Partenaire> listePartenaires = new HashMap<Integer, Partenaire>();
+	public static HashMap<Integer, Partenaire> listePartenaires = new HashMap<Integer, Partenaire>();
 			
-	public HashMap<Integer, Partenaire> getPartenaires() {
+	public static HashMap<Integer, Partenaire> getPartenaires() {
 		return listePartenaires;
 	}
 	
-	public void addPartenaire(Partenaire partenaire) {
+	public static void addPartenaire(Partenaire partenaire) {
 		listePartenaires.put(partenaire.getId(), partenaire);
 	}
 
-	public void getAll() {
+	public static void getAll() {
 		for (int i : listePartenaires.keySet()) {
 			System.out.println("Partenaire: " + listePartenaires.get(i).getNom());
 			System.out.println("--------Cadeaux Disponible----------");
