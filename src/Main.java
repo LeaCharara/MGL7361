@@ -1,5 +1,3 @@
-import java.io.Console;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -28,7 +26,7 @@ public class Main {
 		Lea.setStatutVUP();
 		Lea.getInfo();
 		System.out.println("\n");
-		System.out.println("-------------Catalogue-------------");
+		System.out.println("-------------Catalogue------------- \n");
 		catalogue.getAll();
 		 
 	}
