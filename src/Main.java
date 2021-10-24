@@ -19,7 +19,7 @@ public class Main {
 		Municipalite Montreal = new Municipalite("Montreal");
 		Municipalite Quebec = new Municipalite("Quebec");
 		
-		Quebec.createAvantage(new Avantage("Offre sur les tickets de bus"));
+		Quebec.addAvantage(new Avantage("Offre sur les tickets de bus"));
 		
 		Client Lea = new Client("Lea", Quebec);
 		Lea.getInfo();

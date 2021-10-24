@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.HashMap;
 
-public class Municipalite {
+public class Municipalite implements IGestionAvantage {
 
 	private String nom;
 	private HashMap<Integer, Avantage> avantages;
@@ -10,7 +10,7 @@ public class Municipalite {
 		this.nom = nom;
 		avantages = new HashMap<Integer, Avantage>();
 	}
-	public void createAvantage(Avantage avantage) {
+	public void addAvantage(Avantage avantage) {
 		avantages.put(avantage.getId(), avantage);
 	}
 
