@@ -17,6 +17,10 @@ public class CarteINF {
         soldePoint += (int)price*0.1;
     }
 
+    public void Bonus(){
+        soldePoint += nbUtilisations * 10;
+    }
+
     public void removePoints(int points){
         soldePoint -= points;
     }

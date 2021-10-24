@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.text.DateFormatSymbols;
 public class Main {
 
 	public static void main(String[] args) {
@@ -18,7 +21,10 @@ public class Main {
 		Municipalite Quebec = new Municipalite("Quebec");
 		
 		Quebec.addAvantage(new Avantage("Offre sur les tickets de bus"));
-		
+		Calendar month = Calendar.getInstance();
+		LocalDate currentdate = LocalDate.now();
+		int currentDay = currentdate.getDayOfMonth();
+		int lastdate = month.getActualMaximum(Calendar.DATE);
 		Client Lea = new Client("Lea", Quebec);
 		Lea.getInfo();
 		System.out.println("\n");
@@ -28,7 +34,9 @@ public class Main {
 		System.out.println("\n");
 		System.out.println("-------------Catalogue------------- \n");
 		catalogue.getAll();
-		 
+		if (currentDay == lastdate) {
+			Lea.getCarte().Bonus();
+		}
 	}
 
 }
