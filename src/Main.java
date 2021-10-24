@@ -7,13 +7,13 @@ public class Main {
 		CatalogueCadeau catalogue = new CatalogueCadeau();
 
 		Partenaire Metro = new Partenaire("Metro");
-		Metro.addCadeau(new Cadeau("Offre sur les bananes",3.5));
+		Metro.addCadeau(new Cadeau("Machine à café", 1500));
 		Partenaire IGA = new Partenaire("IGA");
 		catalogue.addPartenaire(IGA);
 		Partenaire Pharmaprix = new Partenaire("Pharmaprix");
 		catalogue.addPartenaire(Pharmaprix);
-		IGA.addCadeau(new Cadeau("Offre sur les fromages",5));
-		IGA.addCadeau(new Cadeau("Offre sur les jus",4));
+		IGA.addCadeau(new Cadeau("Brosse à dent electrique",500));
+		IGA.addCadeau(new Cadeau("10 Mascaras",700));
 		
 
 		Municipalite Montreal = new Municipalite("Montreal");

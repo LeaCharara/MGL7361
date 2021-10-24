@@ -22,11 +22,25 @@ public class Partenaire implements IPartenaire, IGestionAvantage{
 
 	public HashMap<Integer, Cadeau> getCadeaux(){return cadeaux;}
 
+	public HashMap<Integer, Avantage> getAvantages() {
+		return avantages;
+	}
+
 	public void getlisteCadeauxAsString() {
-		if(cadeaux.size() == 0){System.out.println("Aucune");}
+		if(cadeaux.size() == 0){System.out.println("Aucun");}
 		else{
 			for (int i : cadeaux.keySet()){
-				System.out.println(cadeaux.get(i).getNom());
+				System.out.println(cadeaux.get(i).getNom() + " | Points: "+cadeaux.get(i).getPrix() + " pts");
+			}
+		}
+	}
+	
+	public void getlisteAvantagesAsString() {
+		if (avantages.size() == 0) {
+			System.out.println("Aucun");
+		} else {
+			for (int i : avantages.keySet()) {
+				System.out.println(avantages.get(i).getNom());
 			}
 		}
 	}	
