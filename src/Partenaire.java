@@ -60,11 +60,18 @@ public class Partenaire implements IPartenaire, IGestionAvantage{
 		avantages.remove(avantage.getId());
 	}
 	
-	public void validatePoints(int points, CarteINF carte) {
-		carte.removePoints(points);
+	public void validatePoints(Cadeau cadeau, CarteINF carte) {
+		if(carte.getPoints() > cadeau.getPrix()){
+			carte.removePoints(cadeau.getPrix());
+			ListeOperation.addOperation(new Operation("debit", cadeau.getPrix(), carte,this, cadeau));
+			System.out.println("Transaction effectuée");
+		}
+		else{
+			System.out.println("Pas assez de points pour valider");		}
 	}
 
 	public void addPoints(double price, CarteINF carte){
+		ListeOperation.addOperation(new Operation("credit", (int) (price * 0.1), carte, this));
 		carte.addPoints(price);
 	}
 }

@@ -10,8 +10,10 @@ public class Main {
 		CatalogueCadeau.addPartenaire(IGA);
 		Partenaire Pharmaprix = new Partenaire("Pharmaprix");
 		CatalogueCadeau.addPartenaire(Pharmaprix);
-		IGA.addCadeau(new Cadeau("Brosse à dent electrique",500));
-		IGA.addCadeau(new Cadeau("10 Mascaras",700));
+		Cadeau c = new Cadeau("Brosse à dent electrique",100);
+		IGA.addCadeau(c);
+		Cadeau c2 = new Cadeau("10 Mascaras",700);
+		IGA.addCadeau(c2);
 		
 
 		Municipalite Montreal = new Municipalite("Montreal");
@@ -26,14 +28,30 @@ public class Main {
 		Lea.getInfo();
 		System.out.println("\n");
 
-		Lea.setStatutVUP();
+		// Lea.setStatutVUP();
 		Lea.getInfo();
 		System.out.println("\n");
 		System.out.println("-------------Catalogue------------- \n");
 		CatalogueCadeau.getAll();
 		if (currentDay == lastdate) {
-			Lea.getCarte().Bonus();
+			Lea.getCarte(0).Bonus();
 		}
+		IGA.addPoints(15000, Lea.getCarte(0));
+		IGA.validatePoints(IGA.getCadeaux().get(c.getId()), Lea.getCarte(0));
+		IGA.validatePoints(IGA.getCadeaux().get(c.getId()), Lea.getCarte(0));
+		IGA.validatePoints(IGA.getCadeaux().get(c2.getId()), Lea.getCarte(0));
+		System.out.println("-------------Transactions------------- \n");
+		Lea.getCarte(0).getTransactions();
+		// IGA.addPoints(300, Lea.getCarte());
+		System.out.println("\n");
+		System.out.println("-------------Cadeaux Populaires pour IGA------------- \n");
+		Statistiques.getCadeauxPopulaires(IGA.getId(), Quebec);
+		System.out.println("\n");
+		System.out.println("-------------Heures d'achalandage pour IGA------------- \n");
+		Statistiques.getAchalandage(IGA.getId(), Quebec);
+		System.out.println("\n");
+
+		Lea.getInfo();
 	}
 
 }

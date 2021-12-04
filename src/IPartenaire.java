@@ -5,6 +5,6 @@ public interface IPartenaire {
     void addCadeau(Cadeau cadeau);
     //void removeCadeau(int index);
     void addPoints(double price, CarteINF carte);
-    void validatePoints(int points, CarteINF carte);
+    void validatePoints(Cadeau cadeau, CarteINF carte);
     
 }

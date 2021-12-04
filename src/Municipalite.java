@@ -8,6 +8,7 @@ public class Municipalite implements IGestionAvantage {
 		super();
 		this.nom = nom;
 		avantages = new HashMap<Integer, Avantage>();
+		addAvantage(new Avantage("45 minutes de stationnement gratuit"));
 	}
 	public void addAvantage(Avantage avantage) {
 		avantages.put(avantage.getId(), avantage);
