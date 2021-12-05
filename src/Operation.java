@@ -9,7 +9,6 @@ public class Operation {
     private Integer points;
     private Integer carteId;
     private Partenaire partenaire;
-    private Integer partenaireId;
     private Cadeau cadeau;
     private Municipalite municipalite;
 
@@ -20,7 +19,6 @@ public class Operation {
         type = t;
         carteId = c.getId();
         partenaire = part;
-        partenaireId = part.getId();
         cadeau = cad;
         municipalite = c.getMunicipalite();
     }
@@ -32,7 +30,6 @@ public class Operation {
         type = t;
         carteId = c.getId();
         partenaire = part;
-        partenaireId = part.getId();
         municipalite = c.getMunicipalite();
     }
 
@@ -40,7 +37,7 @@ public class Operation {
         return carteId;
     }
 
-    public Integer getPartenaireId() { return partenaireId; }
+    public Integer getPartenaireId() { return partenaire.getId(); }
 
     public Integer getId() { return id;}
 
