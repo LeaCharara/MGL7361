@@ -71,7 +71,7 @@ public class CarteINF {
     }
 
     public void getTransactions(){
-        ListeOperation.getOperationsByClientId(id);
+        ListeOperation.getOperationsByCarteId(id);
     }
 
     public HashMap<Integer, Avantage> getAvantages(){

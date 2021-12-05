@@ -11,7 +11,7 @@ public class ListeOperation {
         operations.put(operation.getId(), operation);
     }
 
-    public static Map<Integer, Operation> getOperationsByClientId(Integer carteId) {
+    public static Map<Integer, Operation> getOperationsByCarteId(Integer carteId) {
         Map<Integer, Operation> res = operations.entrySet().stream()
                 .filter(o -> carteId.equals(o.getValue().getCarteId()))
                 .collect(Collectors.toMap(o -> o.getKey(), o -> o.getValue()));
@@ -28,7 +28,7 @@ public class ListeOperation {
         int year = currentCalendar.get(Calendar.YEAR);
         Calendar targetCalendar = Calendar.getInstance();
 
-        Map<Integer, Operation> res = ListeOperation.getOperationsByClientId(carteId);
+        Map<Integer, Operation> res = ListeOperation.getOperationsByCarteId(carteId);
 
         res = res.entrySet().stream()
                 .filter(o -> {

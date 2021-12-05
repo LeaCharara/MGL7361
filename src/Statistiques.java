@@ -49,13 +49,13 @@ public class Statistiques {
             }
         }
 
-        LinkedHashMap<String, Integer> ListeDeCadeauPopulaire = new LinkedHashMap<>();
+        LinkedHashMap<String, Integer> ListeAchalandage = new LinkedHashMap<>();
 
         heures.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .forEachOrdered(x -> ListeDeCadeauPopulaire.put(x.getKey(), x.getValue()));
-        for (String i : ListeDeCadeauPopulaire.keySet()) {
+                .forEachOrdered(x -> ListeAchalandage.put(x.getKey(), x.getValue()));
+        for (String i : ListeAchalandage.keySet()) {
             System.out.println(i + 'h');
         }
     }

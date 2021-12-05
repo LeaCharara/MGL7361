@@ -41,7 +41,7 @@ public class Main {
 		IGA.validatePoints(IGA.getCadeaux().get(c.getId()), Lea.getCarte(0));
 		IGA.validatePoints(IGA.getCadeaux().get(c2.getId()), Lea.getCarte(0));
 		System.out.println("-------------Transactions------------- \n");
-		Lea.getCarte(0).getTransactions();
+		Lea.getOperations();
 		// IGA.addPoints(300, Lea.getCarte());
 		System.out.println("\n");
 		System.out.println("-------------Cadeaux Populaires pour IGA------------- \n");

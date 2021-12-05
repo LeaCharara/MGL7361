@@ -37,7 +37,9 @@ public class Client {
     }
 
     public void getOperations (){
-        ListeOperation.getOperationsByClientId(id);
+        for (CarteINF c : cartes){
+            ListeOperation.getOperationsByCarteId(c.getId());
+        }
     }
     //----------HORS-MODELE-DES-INTERFACES-------------
 
