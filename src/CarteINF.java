@@ -70,7 +70,7 @@ public class CarteINF {
         return nbUtilisations;
     }
 
-    public void getTransactions(){
+    public void getOperations(){
         ListeOperation.getOperationsByCarteId(id);
     }
 

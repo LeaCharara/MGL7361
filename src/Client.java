@@ -41,6 +41,10 @@ public class Client {
             ListeOperation.getOperationsByCarteId(c.getId());
         }
     }
+
+    public void getCatalogueCadeau () {
+        CatalogueCadeau.getAll();
+    }
     //----------HORS-MODELE-DES-INTERFACES-------------
 
     public void getInfo() {
