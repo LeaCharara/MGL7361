@@ -24,25 +24,6 @@ public class Partenaire implements IPartenaire, IGestionAvantage{
 
 	public HashMap<Integer, Avantage> getAvantages() {
 		return avantages;
-	}
-
-	public void getlisteCadeauxAsString() {
-		if(cadeaux.size() == 0){System.out.println("Aucun");}
-		else{
-			for (int i : cadeaux.keySet()){
-				System.out.println(cadeaux.get(i).getNom() + " | Points: "+cadeaux.get(i).getPrix() + " pts");
-			}
-		}
-	}
-	
-	public void getlisteAvantagesAsString() {
-		if (avantages.size() == 0) {
-			System.out.println("Aucun");
-		} else {
-			for (int i : avantages.keySet()) {
-				System.out.println(avantages.get(i).getNom());
-			}
-		}
 	}	
 
 	//IPARTENAIRE
@@ -76,5 +57,25 @@ public class Partenaire implements IPartenaire, IGestionAvantage{
 
 	public void removeAvantage(Avantage avantage) {
 		avantages.remove(avantage.getId());
+	}
+	
+	//HORS DIAGRAMME DE CLASSE
+	public void getlisteCadeauxAsString() {
+		if(cadeaux.size() == 0){System.out.println("Aucun");}
+		else{
+			for (int i : cadeaux.keySet()){
+				System.out.println(cadeaux.get(i).getNom() + " | Points: "+cadeaux.get(i).getPrix() + " pts");
+			}
+		}
+	}
+	
+	public void getlisteAvantagesAsString() {
+		if (avantages.size() == 0) {
+			System.out.println("Aucun");
+		} else {
+			for (int i : avantages.keySet()) {
+				System.out.println(avantages.get(i).getNom());
+			}
+		}
 	}
 }
