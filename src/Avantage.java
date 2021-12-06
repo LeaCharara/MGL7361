@@ -1,5 +1,5 @@
 import java.lang.Math;
-;public class Avantage {
+public class Avantage {
 
 	private String nom;
 	private int id;
