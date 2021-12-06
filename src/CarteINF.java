@@ -68,7 +68,7 @@ public class CarteINF {
         return nbUtilisations;
     }
 
-    //-------------------METHODES AJOUTES-----------------------//
+    //METHODES AJOUTES
     
     public void setStatutVUP() {
         statutVUP = !statutVUP;
@@ -91,7 +91,7 @@ public class CarteINF {
 
     public Boolean getStatut() { return statutVUP; }
 
-    //----------HORS-MODELE-DES-INTERFACES-------------//
+    //HORS-MODELE-DES-INTERFACES
     
     public void getInfo() {
         System.out.println("Numero de la carte: " + id);
