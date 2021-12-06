@@ -91,7 +91,7 @@ public class CarteINF {
 
     public Boolean getStatut() { return statutVUP; }
 
-    //HORS-MODELE-DES-INTERFACES
+    //HORS DIAGRAMME DE CLASSES
     
     public void getInfo() {
         System.out.println("Numero de la carte: " + id);
