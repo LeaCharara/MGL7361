@@ -45,7 +45,7 @@ public class Client {
     public void getCatalogueCadeau () {
         CatalogueCadeau.getAll();
     }
-    //----------HORS-MODELE-DES-INTERFACES-------------
+    //HORS DIAGRAMME DE CLASSE
 
     public void getInfo() {
         System.out.println("------------Information du client------------");
