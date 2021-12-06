@@ -7,7 +7,7 @@ public class Municipalite implements IGestionAvantage {
 	private HashMap<Integer, Avantage> avantages;
 	public Municipalite(String nom) {
 		super();
-		this.id = id;
+		this.id = (int)(Math.random() * 828829);
 		this.nom = nom;
 		avantages = new HashMap<Integer, Avantage>();
 		addAvantage(new Avantage("45 minutes de stationnement gratuit"));
