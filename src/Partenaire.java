@@ -44,6 +44,8 @@ public class Partenaire implements IPartenaire, IGestionAvantage{
 			}
 		}
 	}	
+
+	//IPARTENAIRE
 	public void addCadeau(Cadeau cadeau) {
 		cadeaux.put(cadeau.getId(), cadeau); 
 	}	
@@ -52,12 +54,9 @@ public class Partenaire implements IPartenaire, IGestionAvantage{
 		cadeaux.remove(cadeau.getId());
 	}
 
-	public void addAvantage(Avantage avantage) {
-		avantages.put(avantage.getId(), avantage);
-	}
-
-	public void removeAvantage(Avantage avantage) {
-		avantages.remove(avantage.getId());
+	public void addPoints(double price, CarteINF carte){
+		ListeOperation.addOperation(new Operation("credit", (int) (price * 0.1), carte, this));
+		carte.addPoints(price);
 	}
 	
 	public void validatePoints(Cadeau cadeau, CarteINF carte) {
@@ -70,8 +69,12 @@ public class Partenaire implements IPartenaire, IGestionAvantage{
 			System.out.println("Pas assez de points pour valider");		}
 	}
 
-	public void addPoints(double price, CarteINF carte){
-		ListeOperation.addOperation(new Operation("credit", (int) (price * 0.1), carte, this));
-		carte.addPoints(price);
+	//IGESTION AVANTAGE
+	public void addAvantage(Avantage avantage) {
+		avantages.put(avantage.getId(), avantage);
+	}
+
+	public void removeAvantage(Avantage avantage) {
+		avantages.remove(avantage.getId());
 	}
 }

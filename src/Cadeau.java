@@ -1,9 +1,9 @@
 import java.lang.Math;
 public class Cadeau implements ICadeau{
 
+	private int id;
 	public String nom;
 	public int prix;
-	private int id;
 	
 	public Cadeau(String nom, int prix) {
 		super();

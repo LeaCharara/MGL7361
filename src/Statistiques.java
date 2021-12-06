@@ -1,6 +1,7 @@
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+//CLASSE AJOUTEE A L'EXTENSION (PARTIE 2)
 public class Statistiques {
     
     public static Integer getParticipationsDesClients(Integer pId, Municipalite m){

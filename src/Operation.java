@@ -1,12 +1,13 @@
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+//--CLASSE AJOUTEE A L'EXTENSION (PARTIE 2)--
 public class Operation {
 
     private int id;
-    private Date date;
-    private String type;
     private Integer points;
+    private String type;
+    private Date date;
     private Integer carteId;
     private Partenaire partenaire;
     private Cadeau cadeau;
@@ -48,6 +49,8 @@ public class Operation {
     public Date getDate() {return date;}
 
     public Integer getPoints() { return points;}
+
+    //----------HORS-MODELE-DES-INTERFACES-------------
 
     public void printOperation() {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");

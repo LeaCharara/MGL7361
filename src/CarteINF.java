@@ -34,8 +34,6 @@ public class CarteINF {
         soldePoint += (int)price*0.1;
     }
 
-    public Municipalite getMunicipalite(){return municipalite;}
-
     public void Bonus(){
         soldePoint += nbUtilisations * 10;
     }
@@ -70,16 +68,8 @@ public class CarteINF {
         return nbUtilisations;
     }
 
-    public void getOperations(){
-        ListeOperation.getOperationsByCarteId(id);
-    }
-
-    public HashMap<Integer, Avantage> getAvantages(){
-        return avantages;
-    }
-
-    public Boolean getStatut() { return statutVUP; }
-
+    //-------------------METHODES AJOUTES-----------------------//
+    
     public void setStatutVUP() {
         statutVUP = !statutVUP;
         if (statutVUP) {
@@ -88,8 +78,20 @@ public class CarteINF {
             avantages = new HashMap<Integer, Avantage>();
         }
     }
+    
+    public HashMap<Integer, Avantage> getAvantages(){
+        return avantages;
+    }
 
-    //----------HORS-MODELE-DES-INTERFACES-------------
+    public Municipalite getMunicipalite(){return municipalite;}
+    
+    public void getOperations(){
+        ListeOperation.getOperationsByCarteId(id);
+    }
+
+    public Boolean getStatut() { return statutVUP; }
+
+    //----------HORS-MODELE-DES-INTERFACES-------------//
     
     public void getInfo() {
         System.out.println("Numero de la carte: " + id);
