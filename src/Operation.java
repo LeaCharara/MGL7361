@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-//--CLASSE AJOUTEE A L'EXTENSION (PARTIE 2)--
+//CLASSE AJOUTEE A L'EXTENSION (PARTIE 2)
 public class Operation {
 
     private int id;
@@ -50,7 +50,7 @@ public class Operation {
 
     public Integer getPoints() { return points;}
 
-    //----------HORS-MODELE-DES-INTERFACES-------------
+    //HORS DIAGRAMME DE CLASSE
 
     public void printOperation() {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
